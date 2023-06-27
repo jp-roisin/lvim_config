@@ -7,6 +7,9 @@ a global executable or a path to
 an executable
 ]]
 -- THESE ARE EXAMPLE CONFIGS FEEL FREE TO CHANGE TO WHATEVER YOU WANT
+--
+-- Sketch
+vim.o.timeoutlen = 500
 
 -- general
 lvim.log.level = "warn"
@@ -176,7 +179,7 @@ lvim.plugins = {
   -- { "lunarvim/onedarker.nvim"},
   { "navarasu/onedark.nvim" },
   { "olimorris/onedarkpro.nvim" },
-  { "talha-akram/noctis.vim" },
+  -- { "talha-akram/noctis.vim" },
   { "pangloss/vim-javascript" },
   {
     "f-person/git-blame.nvim",
@@ -209,6 +212,18 @@ lvim.plugins = {
     config = function()
       require("nvim-ts-autotag").setup()
     end,
+  },
+  {
+    "tpope/vim-surround",
+
+    -- make sure to change the value of `timeoutlen` if it's not triggering correctly, see https://github.com/tpope/vim-surround/issues/117
+    -- setup = function()
+    --  vim.o.timeoutlen = 500
+    -- end
+  },
+  {
+    "sindrets/diffview.nvim",
+    event = "BufRead",
   },
   { "zbirenbaum/copilot.lua",
     event = { "VimEnter" },
