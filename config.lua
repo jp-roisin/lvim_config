@@ -181,7 +181,7 @@ lvim.plugins = {
   { "olimorris/onedarkpro.nvim" },
   -- { "talha-akram/noctis.vim" },
   { "pangloss/vim-javascript" },
-  { "pantharshit00/coc-prisma" },
+  { "prisma/vim-prisma" },
   {
     "f-person/git-blame.nvim",
     event = "BufRead",
