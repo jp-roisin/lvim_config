@@ -181,6 +181,7 @@ lvim.plugins = {
   { "olimorris/onedarkpro.nvim" },
   -- { "talha-akram/noctis.vim" },
   { "pangloss/vim-javascript" },
+  { "pantharshit00/coc-prisma" },
   {
     "f-person/git-blame.nvim",
     event = "BufRead",
@@ -188,6 +189,24 @@ lvim.plugins = {
       vim.cmd "highlight default link gitblame SpecialComment"
       vim.g.gitblame_enabled = 0
     end,
+  }, {
+    "tpope/vim-fugitive",
+    cmd = {
+      "G",
+      "Git",
+      "Gdiffsplit",
+      "Gread",
+      "Gwrite",
+      "Ggrep",
+      "GMove",
+      "GDelete",
+      "GBrowse",
+      "GRemove",
+      "GRename",
+      "Glgrep",
+      "Gedit"
+    },
+    ft = { "fugitive" }
   },
   {
     "norcalli/nvim-colorizer.lua",
